@@ -1,4 +1,4 @@
-import com.sun.javaws.exceptions.InvalidArgumentException
+
 import java.io.{FileOutputStream, FileWriter, File}
 import java.net.URL
 import java.nio.ByteBuffer
@@ -20,10 +20,6 @@ private object LibraryProvider {
       case _ => printUsageHelp()
     }
   } catch {
-    case ex: InvalidArgumentException =>
-      println()
-      println("ERROR: " + ex.getMessage)
-      printUsageHelp()
     case ex: Exception =>
       println(ex)
       printUsageHelp()
