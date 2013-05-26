@@ -82,7 +82,7 @@ private object LibraryProvider {
   }
 
   private def dexJarFile(src:File, dest:File) = {
-    Process.apply(s"""dx.bat -JXmx1024M -JXms1024M -JXss4M --debug --dex --output=${dest.getAbsolutePath} ${src.getAbsolutePath}""").!
+    Process.apply(s"""dx.bat -JXmx1024M -JXms1024M -JXss4M --no-optimize --debug --dex --output=${dest.getAbsolutePath} ${src.getAbsolutePath}""").!
     dest
   }
 
